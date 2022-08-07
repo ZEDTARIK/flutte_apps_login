@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -17,7 +17,7 @@ class Welcome extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                color: Color.fromARGB(255, 164, 163, 160),
+                color: Color.fromARGB(255, 219, 227, 54),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -26,7 +26,7 @@ class Welcome extends StatelessWidget {
                     ),
                     Text(
                       "Welcome",
-                      style: TextStyle(fontSize: 40),
+                      style: TextStyle(fontSize: 40, fontFamily: "myFont"),
                     ),
                     SizedBox(
                       height: 35,
@@ -37,6 +37,45 @@ class Welcome extends StatelessWidget {
                     ),
                     SizedBox(
                       height: 35,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/login");
+                      },
+                      child: Text(
+                        "login",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.purple),
+                          padding: MaterialStateProperty.all(
+                              EdgeInsets.symmetric(
+                                  horizontal: 85, vertical: 13)),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30)))),
+                    ),
+                    SizedBox(
+                      height: 35,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/signup");
+                      },
+                      child: Text(
+                        "Signup",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.purple),
+                          padding: MaterialStateProperty.all(
+                              EdgeInsets.symmetric(
+                                  horizontal: 77, vertical: 13)),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30)))),
                     ),
                   ],
                 ),

@@ -38,7 +38,7 @@ class Login extends StatelessWidget {
                     ),
                     Text(
                       "Login",
-                      style: TextStyle(fontSize: 40),
+                      style: TextStyle(fontSize: 40, fontFamily: "myFont"),
                     ),
                     SizedBox(
                       height: 35,
