@@ -15,23 +15,43 @@ class Welcome extends StatelessWidget {
           height: double.infinity,
           child: Stack(
             children: [
-              Column(
-                children: [
-                  Text("Welcome"),
-                  SvgPicture.asset("assets/icons/chat.svg")
-                ],
+              Container(
+                width: double.infinity,
+                color: Color.fromARGB(255, 164, 163, 160),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: 35,
+                    ),
+                    Text(
+                      "Welcome",
+                      style: TextStyle(fontSize: 40),
+                    ),
+                    SizedBox(
+                      height: 35,
+                    ),
+                    SvgPicture.asset(
+                      "assets/icons/chat.svg",
+                      width: 300,
+                    ),
+                    SizedBox(
+                      height: 35,
+                    ),
+                  ],
+                ),
               ),
               Positioned(
                   left: 0,
                   child: Image.asset(
                     "assets/images/main_top.png",
-                    width: 111,
+                    width: 90,
                   )),
               Positioned(
                   bottom: 0,
                   child: Image.asset(
                     "assets/images/main_bottom.png",
-                    width: 111,
+                    width: 70,
                   ))
             ],
           ),
