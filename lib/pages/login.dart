@@ -17,6 +17,7 @@ class Login extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
+                  top: 0,
                   left: 0,
                   child: Image.asset(
                     "assets/images/main_top.png",
@@ -24,6 +25,7 @@ class Login extends StatelessWidget {
                   )),
               Positioned(
                   bottom: 0,
+                  left: 0,
                   child: Image.asset(
                     "assets/images/main_bottom.png",
                     width: 90,
@@ -43,7 +45,31 @@ class Login extends StatelessWidget {
                     SizedBox(
                       height: 35,
                     ),
-                    SvgPicture.asset("assets/icons/login.svg")
+                    SvgPicture.asset(
+                      "assets/icons/login.svg",
+                      width: 300,
+                    ),
+                    SizedBox(
+                      height: 35,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/login");
+                      },
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.purple),
+                          padding: MaterialStateProperty.all(
+                              EdgeInsets.symmetric(
+                                  horizontal: 85, vertical: 13)),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30)))),
+                      child: Text(
+                        "login",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ),
                   ],
                 ),
               )

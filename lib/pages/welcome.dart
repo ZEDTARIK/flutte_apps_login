@@ -17,7 +17,7 @@ class Welcome extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                color: Color.fromARGB(255, 219, 227, 54),
+                color: Color.fromARGB(255, 218, 229, 8),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -82,12 +82,14 @@ class Welcome extends StatelessWidget {
               ),
               Positioned(
                   left: 0,
+                  top: 0,
                   child: Image.asset(
                     "assets/images/main_top.png",
                     width: 90,
                   )),
               Positioned(
                   bottom: 0,
+                  left: 0,
                   child: Image.asset(
                     "assets/images/main_bottom.png",
                     width: 70,
